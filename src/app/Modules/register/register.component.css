@@ -107,3 +107,7 @@ button[type=submit]:hover {
   justify-content: center;
   gap: 10px;
 }
+
+.error_display{
+  color: red;
+}

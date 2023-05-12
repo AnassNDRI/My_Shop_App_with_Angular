@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
 
-
+// Routes
 const routes: Routes = [
   {
     path: '', children: [

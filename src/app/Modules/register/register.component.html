@@ -7,23 +7,23 @@
 
       <div>
       <input type="text" class="form-control" placeholder="Nom" formControlName="nom" id="nom" />
-        <span class="error" *ngIf="formGroup.controls['nom'].touched && formGroup.controls['nom'].invalid">Le nom est obligatoire et doit contenir au moins 2 lettres</span>
+        <span class="error error_display" *ngIf="formGroup.controls['nom'].touched && formGroup.controls['nom'].invalid">Le nom est obligatoire et doit contenir au moins 2 lettres</span>
       </div>
 
       <div>
       <input type="text" class="form-control" placeholder="Prénom" formControlName="prenom" id="prenom" />
-        <span class="error" *ngIf="formGroup.controls['prenom'].touched && formGroup.controls['prenom'].invalid">Le prénom est obligatoire et doit contenir au moins 2 lettres</span>
+        <span class="error error_display" *ngIf="formGroup.controls['prenom'].touched && formGroup.controls['prenom'].invalid">Le prénom est obligatoire et doit contenir au moins 2 lettres</span>
       </div>
 
 
       <div>
       <input type="email" class="form-control"  placeholder="Email"formControlName="email" id="email" />
-        <span class="error" *ngIf="formGroup.controls['email'].touched && formGroup.controls['email'].invalid">L'adresse email est obligatoire</span>
+        <span class="error error_display" *ngIf="formGroup.controls['email'].touched && formGroup.controls['email'].invalid">L'adresse email est obligatoire</span>
      </div>
 
       <div>
       <input type="password" class="form-control" placeholder="Mot de passe "formControlName="mdp" id="mdp" />
-        <span class="error" *ngIf="formGroup.controls['mdp'].touched && formGroup.controls['mdp'].invalid">Le mot de passe est obligatoire</span>
+        <span class="error error_display" *ngIf="formGroup.controls['mdp'].touched && formGroup.controls['mdp'].invalid">Le mot de passe est obligatoire</span>
       </div>
 
       <div>
