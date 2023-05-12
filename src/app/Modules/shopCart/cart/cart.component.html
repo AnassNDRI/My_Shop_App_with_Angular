@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4"> Les details de votre panier</h1>
+    </div>
+  </div>
+
+<table>
+  <tr>
+    <th >Article</th>
+    <th >Libellé</th>
+    <th >Prix unitaire </th>
+    <th >Quantité</th>
+    <th >Prix TVAC</th>
+  </tr>
+  <tr *ngFor="let cartLine of cart">
+    <img [src]=cartLine.product.url class="card-img-top" alt="...">
+    <td><h5>{{ cartLine.product.intitule }}</h5></td>
+    <td class="prix">{{ cartLine.product.prix  }} €</td>
+    <td><a class="icon icon-sm rounded-rectangle border" style="position:relative">
+      <span class="info-quantite">{{ cartLine.quantite }}</span>
+    </a> </td>
+    <td class="prix">{{ (cartLine.quantite * cartLine.product.prix )}} €</td>
+    <td>
+      <div class="ligne-article-actions">
+        <i class="fa-solid fa-square-plus" aria-hidden="true" (click)="addProduct(cartLine.product)"></i>
+      </div>
+    </td>
+    <td>
+      <div class="ligne-article-actions">
+        <i class="fa-solid fa-square-minus" aria-hidden="true" (click)="removeProduct(cartLine.product)"></i>
+      </div>
+    </td>
+    <td>
+      <div class="text-center my-4"> <a class="btn btn-warning"  (click)="askDelete(cartLine.product.id)">Supprimer</a> </div>
+    </td>
+  </tr>
+</table>
+<div class="prix-total">
+  <span colspan="3" class="Prix-total" style="text-align: right;padding-right: 10px;"  *ngIf="totalPrice > 0">Montant Total TVAC : &nbsp;&nbsp; {{ totalPrice  }} € </span>
+</div>
+
+<div class="save-barre">
+  <button sytyle type="button" class="btn  btn-Retour" (click)="askBack()"  *ngIf="totalPrice > 0">Annuler</button>
+  <button type="button" class="btn btn-Valider" (click)="askOrder()" *ngIf="totalPrice > 0">Valider..<i class="fa-solid fa-circle-check"></i></button>
+</div>
+
+
+  <div >
+    <button type="button" class="btn  btn-vider" (click)="clearCart()" *ngIf="totalPrice > 0">Vider </button>
+     </div>
+
+
+
+
+<div class="text-center my-5 " style="background-color: white " *ngIf="totalPrice <= 0">
+  <h4>Votre panier est vide</h4>
+  <button class="btn  btn-RetourPanier"   routerLink="/">Retourner à la Boutique</button>
+</div>
+</div>

@@ -1,0 +1,32 @@
+{
+    "button.save": "Save",
+    "button.back": "Back",
+
+    "change-language.french": "Francais",
+    "change-language.english": "Anglais",
+    "change-language.home": "Home",
+    "change-language.faqs": "FAQs",
+    "change-language.about": "About",
+    "change-language.admin": "Admin",
+    "change-language.login": "Login",
+    "change-language.signUp": "Sign-up",
+    "change-language.profil": "My space",
+    "change-language.deconnexion": "Sign-out",
+
+
+   "login.title": "Welcome",
+   "login.text": "Enter your email and password to sign in.",
+   "login.text1": "Enter your data to sign up .",
+   "change-login.email": "Email",
+   "change-login.password": "Password",
+
+
+   "change-language.question": "Don't have an account?",
+   "change-language.lien": "Register Here  ",
+   "change-login.username": "User Name ",
+
+  "gestion.adresse": "Management adress",
+  "gestion.article": "Item management",
+
+  "gestion.utilisateur": "User management"
+}

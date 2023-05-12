@@ -1,0 +1,32 @@
+{
+    "button.save": "Sauvegarder",
+    "button.back": "Retour",
+
+    "change-language.french": "Francais",
+    "change-language.english": "Anglais",
+    "change-language.home": "Accueil",
+    "change-language.faqs": "FAQs",
+    "change-language.about": "A propos",
+    "change-language.admin": "Admin",
+    "change-language.login": "Se connecter",
+    "change-language.signUp": "S'inscrire",
+    "change-language.profil": "Mon profil",
+    "change-language.deconnexion": "Se déconnecter",
+
+    "change-login.email": "Email",
+    "change-login.password": "Mot de passe",
+    "login.title": "Bienvenue",
+    "login.text": "Entrez votre email et votre mot de passe pour vous authentifier.",
+    "login.text1": "Entrez vos données pour vous accéder au formulaire d'inscription .",
+
+
+    "change-language.question": "Vous n'avez pas de compte ?",
+    "change-language.lien": "Inscrivez-vous ici",
+    "change-login.username": "Nom d'utilisateur",
+
+    "gestion.adresse": "Gestion des adresses",
+    "gestion.article": "Gestion des articles",
+
+    "gestion.utilisateur": "Gestion des utilisateurs"
+
+}

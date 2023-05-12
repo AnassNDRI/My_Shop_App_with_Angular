@@ -1,0 +1,11 @@
+<div id="menu-language"  (clickOutside)="onClickOutSideMenuLanguage($event)">
+  <div id="change-language"(click)="showLanguageMenu=!showLanguageMenu">
+    <span class="icon fas fa-globe"></span>
+  </div>
+  <div class="menu-language" [class.menu-language-hide]="!showLanguageMenu"
+       [class.menu-language-show]="showLanguageMenu" (click)="showLanguageMenu=!showLanguageMenu">
+    <div class="menu-language-action" (click)="setLanguage('fr')">{{'change-language.french' | translate}}</div>
+    <div class="menu-language-action" (click)="setLanguage('en')">{{'change-language.english' | translate}}</div>
+  </div>
+</div>
+

@@ -1,0 +1,30 @@
+
+
+<div class="container d-flex justify-content-center">
+  <figure class="card card-product-grid card-lg"> <a href="#" class="img-wrap" data-abc="true"> <img [src]=prod.url> </a>
+
+    <div class="card-body">
+      <div class="clearfix mb-3">
+        <label>Code Barre : </label><span class="float-end price">{{prod.codeBarre}} € </span> </div>
+      <div class="clearfix mb-3">
+        <label>Intitulé : </label> <span class="float-end price">{{prod.intitule}} </span> </div>
+      <div class="clearfix mb-3">
+      <div class="clearfix mb-3">
+        <label>Description : </label><span class="float-end price">{{prod.description}} € </span> </div>
+      <div class="clearfix mb-3">
+        <label>TVA : </label><span class="float-end price">{{getTVA(prod.tvaId)}} € </span> </div>
+    </div>
+      <div class="clearfix mb-3">
+        <label>Prix : </label><span class="float-end price">{{prod.prix}} € </span> </div>
+    </div>
+
+    <div class="text-center my-4"> <a class="btn btn-warning"  (click)="askAddToCart(prod, $event)"><i class="fas fa-shopping-cart"></i></a> </div>
+    <div class="price-wrap"> <a href="#" class="btn btn-secondary float-left" (click)="askBack()"> Cancel </a> </div>
+
+
+
+
+
+  </figure>
+</div>
+

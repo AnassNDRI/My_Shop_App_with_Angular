@@ -1,0 +1,35 @@
+
+<div class="container">
+
+<div class="shop-form-container">
+  <div class="shadowbox">
+    <div class="card mb-4" >
+      <div class="card-header py-3" style="color: darkgreen ; text-align: center" >
+        <h5 class="mb-0">Confirmation de votre Commande</h5>
+        <p> <b style="color: #212529 "> Hello ! {{currentUser.nom}} {{currentUser.prenom}}</b></p>
+        <p id="sytyle">
+          <strong style="color: #212529">Votre commande N°</strong>
+          <strong style="color: #212529">  {{numCommande}}</strong>
+          <strong style="color: #212529"> a été traitée avec succès</strong>
+          <br> <br>
+          Elle vous sera livrée  dans les 3 jours ouvrables.
+         <p>Notre ShopAround vous remerci de votre visite </p>
+      </div>
+      <div class="card-body"  >
+
+        <table classe="table table-hover" >
+          <tr>
+            <td colspan="3" id="dateTraitement"><strong>Date de traitement :{{curDate | date:'dd/MM/YYYY'}}</strong>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="center-div">
+      <button type="button" class="btn  btn-vider" (click)="close()" >FERMER </button>
+    </div>
+  </div>
+</div>
+
+</div>
+

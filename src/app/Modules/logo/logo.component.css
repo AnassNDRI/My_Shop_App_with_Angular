@@ -1,0 +1,16 @@
+.logo {
+  background-image: url("src/assets/logo/logo.png");
+  margin: auto;
+  width: 200px;
+  border-radius: 30px;
+  background-position: center left;
+  background-repeat: no-repeat;
+  height: 80px;
+  background-size: contain;
+}
+
+/* on modifie la classe logo si le composant app-logo (host) contient la classe logo-big */
+:host.logo-big .logo {
+  width: 355px;
+  height: 80px;
+}

@@ -1,0 +1,46 @@
+#menu-language{
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+.menu-language {
+  position: fixed;
+  top: 68px;
+  right: 0;
+  background-color: #ffffff;
+  transition: .5s;
+  overflow: hidden;
+  z-index: 1;
+  border-left: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+}
+.menu-language-action {
+  cursor: pointer;
+  transition: .5s;
+  padding: 8px 1rem;
+  text-align: center;
+}
+.menu-language-action:hover {
+  background: #eeeeee;
+}
+
+
+
+.menu-language-hide {
+  width: 0;
+}
+
+.menu-language-show {
+  width: 125px;
+  padding: 5px;
+}
+
+#toggle-menu, #change-language {
+  min-width: 68px;
+  height: 68px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #232323;
+}
