@@ -70,7 +70,7 @@ main {
   min-height: 500px;
 }
 
-ul {
+.ulElment {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -99,3 +99,39 @@ li a.active {
   color: white;
   background-color: #4CAF50;
 }
+
+
+/* footer.................................... */
+
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  background-color: lightgray;
+  color: white;
+  text-align: center;
+}
+
+.profil {
+overflow:hidden;
+-webkit-border-radius:50px;
+-moz-border-radius:50px;
+border-radius:50px;
+
+}
+
+.footerStyle {
+  font-size: 14px;
+  color: rgb(31, 29, 29);
+  font-weight: bold;
+
+}
+
+.btnAdmin {
+  font-size: 18px;
+  font-weight: bold;
+
+}
+
+

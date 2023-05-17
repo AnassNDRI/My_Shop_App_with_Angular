@@ -75,9 +75,9 @@ export class UserformComponent implements OnInit {
 
   askBack() {
     if( this.accountMode ) {
-      this.router.navigate(['/utilisateurs/single'])
+      this.router.navigate(['/users/single'])
     } else {
-      this.router.navigate(['/utilisateurs'])
+      this.router.navigate(['/users'])
     }
   }
 }

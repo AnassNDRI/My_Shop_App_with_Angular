@@ -11,16 +11,19 @@ import { Base_url } from "src/app/shared/baseUrl";
 })
 export class PaymentMethodService {
 
-  url = Base_url.Url_ServBack + '/paymentMethods';
+  url = Base_url.Url_ServBack + '/paymentMethods'; // Url vers l'api
 
 
   constructor(private http: HttpClient) {
   }
 
+  // liste toutes les moyens de paiements
   list(): Observable<PayementMethod[]> {
     return this.http.get<PayementMethod[]>(this.url + '/list');
   }
 
+  // Cette methode verifie l'Id, s'il y'a une; il modifie le moyen de paiement
+ // sinon une nouvelle Id est auto-générée et le moyen de paiement est enregistré
   save(moyenPaiement: PayementMethod): Observable<PayementMethod> {
     if( moyenPaiement.id ) {
       return this.http.put<PayementMethod>(this.url, moyenPaiement);
@@ -29,10 +32,12 @@ export class PaymentMethodService {
     }
   }
 
+  // Trouver un moyen de paiement à l'aide de son Id
   findById(id: number): Observable<PayementMethod> {
     return this.http.get<PayementMethod>(this.url + '/detail/' + id);
   }
 
+  // supprimer un moyen de paiement
   delete(id: number): Observable<void> {
 
     const url = `${this.url}/delete/${id}`;

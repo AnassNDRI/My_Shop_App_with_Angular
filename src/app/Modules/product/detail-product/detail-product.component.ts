@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Category } from 'src/app/models/category';
 import { Product } from 'src/app/models/product';
 import { Tva } from 'src/app/models/tva';
-import { CategorieService } from '../../services/categorie.service';
+import { CategoryService } from '../../services/category.service';
 import { TvaService } from '../../services/tva.service';
 import { ProductService } from '../../services/product.service';
 import { CartService } from '../../services/cart.service';
@@ -22,14 +22,14 @@ export class DetailProductComponent implements OnInit {
 
   constructor( private route: ActivatedRoute,
                private router: Router,
-               private categorieService: CategorieService,
+               private categoryService: CategoryService,
                private cartService: CartService,
                private tvaService: TvaService,
                private productService: ProductService) {
     this.prodId = this.route.snapshot.params['id']; }
 
   ngOnInit(): void {
-    this.categorieService.list().subscribe( result => this.categoryList = result );
+    this.categoryService.list().subscribe( result => this.categoryList = result );
     this.refreshProd();
   }
 

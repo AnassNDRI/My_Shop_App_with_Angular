@@ -10,7 +10,7 @@ import { SearchProductComponent } from './search-product/search-product.componen
 import { LoaderComponent } from './loader/loader.component';
 import { BorderCardDirective } from './helpers/directive/border-card.directive';
 import { ProductCategoryColorePipePipe } from './helpers/pipe/product-category-colore-pipe.pipe';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {ProductService} from "../services/product.service";
 
 
@@ -31,6 +31,7 @@ import {ProductService} from "../services/product.service";
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     ProductRoutingModule,
     FormsModule,
   ],

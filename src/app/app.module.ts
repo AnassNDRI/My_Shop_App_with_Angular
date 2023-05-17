@@ -26,6 +26,9 @@ import { LanguageComponent } from './Modules/language/language.component';
 import { LogoComponent } from './Modules/logo/logo.component';
 import { ShopCartModule } from './Modules/shopCart/shop-cart.module';
 import { AddressModule } from './Modules/address/address.module';
+import { FaqsComponent } from './Modules/faqs/faqs.component';
+import { AproposComponent } from './Modules/apropos/apropos.component';
+import { ContactComponent } from './Modules/contact/contact.component';
 
 
 @NgModule({
@@ -37,6 +40,9 @@ import { AddressModule } from './Modules/address/address.module';
     RegisterComponent,
     OrderComponent,
     LoginComponent,
+    FaqsComponent,
+    AproposComponent,
+    ContactComponent,
 
   ],
   imports: [

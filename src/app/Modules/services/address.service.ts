@@ -23,6 +23,7 @@ export class AddressService {
   }
 
   // Cette methode verifie l'Id, s'il y'a une; il modifie l'adresse
+ // sinon une nouvelle Id est auto-générée et l'adresse est enregistrée
   save(adress: Address): Observable<Address> {
     if(adress.id) {
       return this.http.put<Address>(this.url, adress); // modification

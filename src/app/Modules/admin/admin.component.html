@@ -1,0 +1,24 @@
+
+<div class="jumbotron jumbotron-fluid " >
+  <div class="container">
+    <h1 class="display-4 btnAdmin">Page d'administration de MyShopAround </h1>
+  </div>
+</div>
+
+
+
+<div class="admin-container" style="padding: 70px;">
+
+  <button class="btn btn-outline-info" type="button" [routerLink]="['/products']" [disabled]="!isAdmin"><i class="fas fa-barcode"></i> &nbsp;{{ 'gestion article'  }}</button>
+  <button class="btn btn-outline-info" type="button" [routerLink]="['/categories']" [disabled]="!isAdmin"><i class="fas fa-folder-tree"></i> &nbsp;{{ 'gestion categorie' }}</button>
+  <button class="btn btn-outline-info" type="button"[routerLink]="['/commandes']" [disabled]="!isAdmin"><i class="fa-solid fa-box-open"></i> &nbsp;{{ 'gestion commande' }}</button>
+  <button class="btn btn-outline-info" type="button" [routerLink]="['/users']" [disabled]="!isAdmin"><i class="fas fa-user"></i> &nbsp;{{ 'gestion utilisateur'  }}</button>
+  <button class="btn btn-outline-info" type="button" [routerLink]="['/factures']" [disabled]="!isAdmin"><i class="fas fa-file-invoice-dollar"></i> &nbsp;{{ 'gestion facture'  }}</button>
+  <button class="btn btn-outline-info" type="button"[routerLink]="['/fournisseurs']" [disabled]="!isAdmin"><i class="fas fa-headset"></i> &nbsp;{{ 'gestion fournisseur'  }} </button>
+  <button class="btn btn-outline-info" type="button" [routerLink]="['/address']" [disabled]="!isAdmin"><i class="fa-solid fa-map-location-dot"></i> &nbsp;{{ 'gestion addresse'  }}</button>
+  <button class="btn btn-outline-info" type="button" [routerLink]="['/livraisons']" [disabled]="!isAdmin"><i class="fas fa-truck-arrow-right"></i> &nbsp;{{ 'gestion livraison'  }}</button>
+  <button class="btn btn-outline-info" type="button" [routerLink]="['/marques']" [disabled]="!isAdmin"><i class="fa-solid fa-copyright"></i> &nbsp;{{ 'gestion marque'  }}</button>
+
+
+</div>
+

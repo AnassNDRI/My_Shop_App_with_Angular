@@ -4,7 +4,7 @@
 
   <div>
 
-<ul style="padding: 10px;">
+<ul style="padding: 10px;" class="ulElment">
   <li> <app-logo></app-logo></li>
   <li><a  style="position:relative" [routerLink]="['/cart']">
     <i class="fas fa-shopping-cart"></i>
@@ -13,9 +13,12 @@
     <li class="nav">
       <a  class="nav-link px-2 link-dark" [routerLink]="['/home']" [routerLinkActive]="'lien-actif'"></a>
     <li>
-    <li class="nav">
-      <a class="nav-link px-2 link-dark" *ngIf="isAdmin || isEmploye" [routerLink]="['/admin']" [routerLinkActive]="'lien-actif'"></a>
+   <li>
+     <a class="btnAdmin"  *ngIf="isAdmin || isEmploye" [routerLink]="['/admin']" [routerLinkActive]="'lien-actif'">Page Administrateur</a>
     </li>
+
+
+
 
   <li style="float:right"> <a  [routerLink]="['/profile']" *ngIf="isAuth"><i class="fa-solid fa-user"></i></a></li>
 
@@ -31,20 +34,35 @@
 
 
 
-<main>
+<main >
   <router-outlet></router-outlet>
 </main>
-
-<footer>
-  <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-    <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
-    <li><a href="/pargenotfound" class="nav-link px-2 link-dark">Features</a></li>
-    <li><a href="/pargenotfound" class="nav-link px-2 link-dark">Pricing</a></li>
-    <li><a href="/pargenotfound" class="nav-link px-2 link-dark">FAQs</a></li>
-    <li><a href="/pargenotfound" class="nav-link px-2 link-dark">About</a></li>
-    <li><a href="/pargenotfound" class="nav-link px-2 link-dark">Contact</a></li>
-  </ul>
+<br>
+<br>
+<footer >
+  <div class="footer">
+    <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+      <li><a href="#" class="nav-link px-2 link-secondary footerStyle ">Home</a></li>
+      <li><a href="pargenotfound" class="nav-link px-2 footerStyle ">Features</a></li>
+      <li><a href="pargenotfound" class="nav-link px-2 footerStyle ">Pricing</a></li>
+      <li><a href="faqs" class="nav-link px-2 footerStyle ">FAQs</a></li>
+      <li><a href="apropos" class="nav-link px-2 footerStyle ">About</a></li>
+      <li><a href="contact" class="nav-link px-2 footerStyle ">Contact</a></li>
+      <li><a href="https://www.facebook.com/JesuisAHUA/" class="nav-link px-2 footerStyle ">Suivez-nous</a></li>
+    </ul>
+    <div class="row" style="padding: 40px ;">
+      <div class="col">
+       <a href="https://github.com/AnassNDRI"><img src="../assets/profil/moi.jpg" width="120" height="150"
+        class="img-fluid img-thumbnail profil"> </a>
+        <p>Dévolopper par:<br>
+          <strong>Anass N'DRI</strong><br>
+          Développeur Full Stack</p>
+      </div>
+    </div>
+ </div>
 </footer>
+
+   <!--========================================= end footer div ========================================-->
 
 
 

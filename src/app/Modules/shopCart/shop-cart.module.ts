@@ -21,11 +21,10 @@ import { CartComponent } from './cart/cart.component';
 
   imports: [
     CommonModule,
-    ShopCartRoutingModule,
     FormsModule,
-    AddressModule,
-
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ShopCartRoutingModule,
+        AddressModule,
   ]
 })
 export class ShopCartModule { }

@@ -17,10 +17,13 @@ export class TvaService {
   constructor(private http: HttpClient) {
   }
 
+  // Liste toutes les TVA
   list(): Observable<Tva[]> {
     return this.http.get<Tva[]>(this.url + '/list');
   }
 
+  // Cette methode verifie l'Id, s'il y'a une; il modifie la TVA sinon
+ // une nouvelle Id est auto-générée et la tv est enregistrée
   save(tva: Tva): Observable<Tva> {
     if( tva.id ) {
       return this.http.put<Tva>(this.url, tva);
@@ -29,20 +32,13 @@ export class TvaService {
     }
   }
 
+  // Trouver la Tva à l'aide de l'Id
   findById(id: number): Observable<Tva> {
     return this.http.get<Tva>(this.url + '/' + id);
   }
 
+  // Suppression de la Tva à l'aide de l'Id
   delete(id: number): Observable<void> {
-    /*
-    const tokenString = sessionStorage.getItem(TOKEN_KEY);
-    const token: any = JSON.parse( tokenString );
-    const headers = new HttpHeaders({
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${token.jwt}`
-    })
-     */
-
     const url = `${this.url}/${id}`;
     return this.http.delete<void>(url);
   }

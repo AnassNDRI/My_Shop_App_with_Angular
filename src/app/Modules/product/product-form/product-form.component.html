@@ -1,1 +1,75 @@
-<p>product-form works!</p>
+
+
+<div class="shop-form-container">
+
+  <h4 *ngIf="!editionMode">Ajouter un article</h4>
+  <h4 *ngIf="editionMode">Modifier un article</h4>
+
+  <form (ngSubmit)="askSave()" [formGroup]="formGroup" class="shop-form">
+
+    <label for="intitule">Intitulé</label>
+    <input type="text" class="form-control" formControlName="intitule" id="intitule" />
+
+    <label for="codeBarre">Code Barre</label>
+    <input type="text" class="form-control" formControlName="codeBarre" id="codeBarre" />
+
+    <label for="prix">Prix</label>
+    <input type="text" class="form-control" formControlName="prix" id="prix" />
+
+    <label>TVA</label>
+    <select class="form-select" formControlName="tvaId">
+      <option [ngValue]="tva.id" *ngFor="let tva of tvaList">
+        {{ tva.libelle }}&nbsp;
+      </option>
+    </select>
+
+    <label>Marque</label>
+    <select class="form-select" formControlName="id">
+      <option [ngValue]="brand.id" *ngFor="let brand of brandList">
+        {{ brand.libelle }}&nbsp;
+      </option>
+    </select>
+
+    <label>Catégorie</label>
+    <select class="form-select" formControlName="categorieId">
+      <option [ngValue]="cat.id" *ngFor="let cat of categoryList">
+        {{ cat.libelle }}&nbsp;
+      </option>
+    </select>
+
+    <label for="description">Description</label>
+    <input type="text" class="form-control" formControlName="description" id="description" />
+
+    <label for="poids">Poids</label>
+    <input type="text" class="form-control" formControlName="poids" id="poids" />
+
+    <label for="longueur">Longueur</label>
+    <input type="text" class="form-control" formControlName="longueur" id="longueur" />
+
+    <label for="largeur">Largeur</label>
+    <input type="text" class="form-control" formControlName="largeur" id="largeur" />
+
+    <label for="hauteur">Hauteur</label>
+    <input type="text" class="form-control" formControlName="hauteur" id="hauteur" />
+
+    <label>Fournisseur</label>
+    <select class="form-select" formControlName="id">
+      <option [ngValue]="supplier"  *ngFor="let supplier of supplierList">
+        {{ supplier.nom }}
+      </option>
+    </select>
+
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox"  formControlName="actif" checked>
+      <label class="form-check-label" *ngIf="formGroup.controls['actif'].value">Article actif </label>
+      <label class="form-check-label" *ngIf="!formGroup.controls['actif'].value">Article inactif</label>
+    </div>
+
+    <div class="save-barre">
+      <button type="submit" class="btn btn-primary" [disabled]="!formGroup.valid"><i class="fas fa-floppy-disk"></i>&nbsp;Sauvegarder</button>
+      <button type="button" class="btn btn-outline-secondary" (click)="askBack()"><i class="fas fa-chevron-left"></i>&nbsp;Annuler</button>
+    </div>
+
+
+  </form>
+</div>

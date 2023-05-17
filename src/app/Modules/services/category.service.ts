@@ -11,19 +11,22 @@ import { Base_url } from "src/app/shared/baseUrl";
 @Injectable({
   providedIn: 'root'
 })
-export class CategorieService {
+export class CategoryService {
 
-  url = Base_url.Url_ServBack + '/categories';
+  url = Base_url.Url_ServBack + '/category';  // Url vers l'api
 
 
   constructor(private http: HttpClient,
               private authService : AuthenticationService) {
   }
 
+  // liste toutes les categories
   list(): Observable<Category[]> {
     return this.http.get<Category[]>(this.url + '/list');
   }
 
+  // Cette methode verifie l'Id, s'il y'a une; il modifie la categorie
+ // sinon une nouvelle Id est auto-générée et la categorie est enregistrée
   save(category: Category): Observable<Category> {
 
     if( category.id ) {
@@ -33,20 +36,16 @@ export class CategorieService {
     }
   }
 
+    // Trouver une categorie à l'aide de son Id
   findById(id: number): Observable<Category> {
     return this.http.get<Category>(this.url + '/detail/' + id);
   }
 
-
-
+    // Supprimer une categorie
   delete(id: number): Observable<void> {
     return this.http.delete<void>( this.url + '/delete/' + id);
   }
-
-
-
-
-
-
 }
+
+
 

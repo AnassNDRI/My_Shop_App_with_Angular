@@ -7,6 +7,10 @@
   </div>
   </div>
 
+  <div class="articles-boutons">
+    <button type="button" class="btn btn-primary" (click)="askAdd()" *ngIf="editionMode" ><i class="fas fa-plus-circle"></i>&nbsp;Ajouter un produit</button>
+    <button type="button" class="btn btn-outline-secondary" (click)="askBack()" *ngIf="editionMode"><i class="fas fa-chevron-left"></i>&nbsp;Retour</button>
+  </div>
 
   <thead>
   <ul id="menu-accordeon">

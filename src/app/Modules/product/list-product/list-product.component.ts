@@ -4,7 +4,7 @@ import {Router} from "@angular/router";
 import {Product} from "../../../models/product";
 import { Category } from 'src/app/models/category';
 import { TvaService } from '../../services/tva.service';
-import { CategorieService } from '../../services/categorie.service';
+import { CategoryService } from '../../services/category.service';
 import { CartService } from '../../services/cart.service';
 
 @Component({
@@ -27,7 +27,7 @@ export class ListProductComponent implements  OnInit{
 
   constructor( private productService: ProductService,
                private cartService: CartService,
-               private categoryService: CategorieService,
+               private categoryService: CategoryService,
                private tvaService: TvaService,
                private router: Router
 

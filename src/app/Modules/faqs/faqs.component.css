@@ -1,0 +1,19 @@
+h4{
+  font-weight: 300;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+}
+
+.container{
+  max-width: 1000px;
+  background: #efefef;
+  text-align: justify;
+  padding: 25px;
+  border-radius: 8px;
+}
+
+.question{
+  text-transform : uppercase;
+  color: #4EB6CF;
+  margin-bottom: 0px;
+}

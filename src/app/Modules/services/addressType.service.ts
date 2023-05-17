@@ -16,7 +16,7 @@ export class AddressTypeService {
   constructor(private http: HttpClient) {
   }
 
-  // Trouver une adresse Type en à l'aide l'Id
+  // Trouver une adresse Type en à l'aide de son Id
   findById(id: number): Observable<AddressType > {
     return this.http.get<AddressType >(this.url + '/' + id);
   }

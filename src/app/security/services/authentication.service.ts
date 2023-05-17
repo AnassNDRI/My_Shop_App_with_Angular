@@ -6,9 +6,9 @@ import {JwtHelperService} from '@auth0/angular-jwt';
 import { Base_url } from 'src/app/shared/baseUrl';
 
 export const  TOKEN_KEY  = 'my-token';
-const BASE_URL = Base_url.Url_ServBack + '/utilisateurs/login';
-const  BASE_URLrg = Base_url.Url_ServBack  + '/utilisateurs/register';
-const  BASE_URLId = Base_url.Url_ServBack  + '/utilisateurs/id';
+const BASE_URL = Base_url.Url_ServBack + '/users/login';
+const  BASE_URLrg = Base_url.Url_ServBack  + '/users/register';
+const  BASE_URLId = Base_url.Url_ServBack  + '/users/id';
 
 
 export const httpOptions = {
